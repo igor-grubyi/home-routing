@@ -3,21 +3,21 @@
     "configurations": [
         {
             "name": "Launch Firefox against localhost, with sourcemaps",
-            "type": "chrome",
+            "type": "firefox",
             "request": "launch",
             "url": "http://localhost:4201/",
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
-            "runtimeExecutable": "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+            "runtimeExecutable": "C:/Program Files (x86)/Mozilla Firefox/firefox.exe",
             "runtimeArgs": [
                 "--incognito"
             ]
         },
         {
             "name": "Attach to Firefox, with sourcemaps",
-            "type": "chrome",
+            "type": "firefox",
             "request": "attach",
-            "port": 9222,
+            "port": 4201,
             "sourceMaps": true,
             /*"diagnosticLogging": true,*/
             "webRoot": "${workspaceRoot}",

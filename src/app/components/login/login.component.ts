@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from './../data.service';
+import { UserService } from './../user.service';
 import { User } from './../../models/user.model';
 
 @Component({
@@ -8,25 +8,29 @@ import { User } from './../../models/user.model';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public btnCaption;
   private _login = '';
   private _pass = '';
-  private _currUser = '';
+  
+  constructor( private _userService: UserService ) { }
 
-  constructor() { } //public dataService: DataService
+  ngOnInit() { }
 
-  ngOnInit() { 
-    this.btnCaption = 'Register';
+  LogIn(): void {
+    if (this.checkUser(this._login, this._pass)) {
+      this._userService.setCurrUserByLogin(this._login);
+    } else { alert('Incorrect creds'); }
   }
 
-  Register() {
-    let user: User;
-    if ((this._login != '') && (this._pass != '')) {
-      user = new User(this._login, this._pass);
-      // this.dataService.setUserToLocal(Login.value, Pass.value);
-    this._currUser = user.name;
-    this.btnCaption = 'Login';
-    }
+  LogOut(): void {
+    this._userService.CurrUser = null;
+    this._login = '';
+    this._pass = '';
+  }
+
+  checkUser(aLogin, aPass: string): boolean {
+      if ( this._userService.getUserFromLocal(aLogin) === aPass) {
+        return true;
+      } else { return false; };
   }
 
 }

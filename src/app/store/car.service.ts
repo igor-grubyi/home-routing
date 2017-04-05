@@ -23,4 +23,8 @@ export class CarService {
     return CarList;
   }
 
+  getCarsByIds(carsID: Array<number>): Array<Car> {
+    return CarList.filter(item => item.id in carsID);
+  }
+
 }

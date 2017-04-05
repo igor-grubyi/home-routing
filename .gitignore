@@ -40,3 +40,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+/docs/Practice_RU.docx
+/docs/Practice_RU.pdf
