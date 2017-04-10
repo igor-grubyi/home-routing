@@ -1,0 +1,12 @@
+<div *ngIf="_isLoggedIn">
+  <h3> Selected cars </h3>
+  <!--<div *ngIf>-->
+    <car 
+      *ngFor="let car of _cars" 
+      [car]="car" 
+      [basketMode]=true 
+      (fromBasket)="DeleteFromBasket($event)"
+      (buy)="openOrder($event)">
+    </car>
+  <!--</div>-->
+</div>

@@ -1,4 +1,6 @@
 <car 
-  *ngFor="let car of cars" 
-  [car]="car">
+  *ngFor="let car of _cars" 
+  [car]="car"
+  [storeMode]=true
+  (toBasket)=AddToBasket($event)>
 </car>

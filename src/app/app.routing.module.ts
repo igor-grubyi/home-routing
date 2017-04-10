@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RegisterComponent, AboutComponent, PageNotFoundComponent } from './components';
+import { RegisterComponent, AboutComponent } from './components';
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'store',
     pathMatch: 'full'
   },
   {
@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   },
 ];
 
-export let appRouterComponents = [RegisterComponent, AboutComponent, PageNotFoundComponent];
+export let appRouterComponents = [RegisterComponent, AboutComponent];
 
 @NgModule({
   imports: [

@@ -2,22 +2,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Firefox against localhost, with sourcemaps",
-            "type": "firefox",
+            "name": "Launch Chrome against localhost, with sourcemaps",
+            "type": "chrome",
             "request": "launch",
             "url": "http://localhost:4201/",
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
-            "runtimeExecutable": "C:/Program Files (x86)/Mozilla Firefox/firefox.exe",
+            "runtimeExecutable": "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
             "runtimeArgs": [
                 "--incognito"
             ]
         },
         {
-            "name": "Attach to Firefox, with sourcemaps",
-            "type": "firefox",
+            "name": "Attach to Chrome, with sourcemaps",
+            "type": "chrome",
             "request": "attach",
-            "port": 4201,
+            "port": 9222,
             "sourceMaps": true,
             /*"diagnosticLogging": true,*/
             "webRoot": "${workspaceRoot}",

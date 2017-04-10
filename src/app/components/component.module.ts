@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { UserService } from '.';
-import { BasketComponent } from './basket/basket.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
-  declarations: [BasketComponent],
+  declarations: [AdminComponent],
   imports: [
     FormsModule,  
     CommonModule,
   ],
-  providers: [
-    UserService
-  ]
+  providers: []
 })
 export class ComponentModule {}

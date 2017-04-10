@@ -9,15 +9,17 @@ import { StoreModule } from './store/store.module';
 import { ComponentModule } from './components/component.module';
 import { RouterModule } from '@angular/router';
 
+import { CarService, UserService, BasketService } from './services';
+import { AuthGuard } from './guards/auth.guard';
 import { AppRoutingModule, appRouterComponents } from './app.routing.module';
-
-
+import { AdminComponent } from './admin/admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     appRouterComponents,
-    LoginComponent
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,12 @@ import { AppRoutingModule, appRouterComponents } from './app.routing.module';
     ComponentModule,
     StoreModule
   ],
-  providers: [],
+  providers: [
+    CarService,
+    UserService,
+    AuthGuard,
+    BasketService
+      ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h2>{{car.brand}}: {{car.model}}</h2></div>
+	<div class="panel-body">
+    <img alt="img for car" 
+		#img
+		align='left'
+		hspace='50'>
+		<ul>
+			<li><h3>Year: {{car.year}}</h3></li>
+			<li><h3>Color: {{car.color}}</h3></li>
+			<li><h3>State: {{car.state}}</h3></li>
+			<br>
+			<button type="button" (click)="AddToBasket()" *ngIf="storeMode" class="btn btn-success">To Basket</button>
+			<button type="button" (click)="Buy()" *ngIf="basketMode" class="btn btn-success">Buy</button>
+			<button type="button" (click)="RemoveFromBasket()" *ngIf="basketMode" class="btn btn-danger">Remove</button>
+		</ul>
+	</div>
+</div>
