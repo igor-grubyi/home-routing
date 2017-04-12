@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Car } from './../../models/car.model';
 
 @Component({
@@ -17,7 +16,7 @@ export class CarComponent implements AfterViewInit {
   @Output() buy: EventEmitter<number>;
   @ViewChild('img') carImg: ElementRef;
 
-  constructor(private router: Router) {
+  constructor() {
     this.toBasket = new EventEmitter<number>();
     this.fromBasket = new EventEmitter<number>();
     this.buy = new EventEmitter<number>();
@@ -28,9 +27,9 @@ export class CarComponent implements AfterViewInit {
   }
 
   AddToBasket(): void {
-    // console.log('carComponent' + this.car.id);
     this.toBasket.emit(this.car.id);
   }
+  
   RemoveFromBasket(): void {
     this.fromBasket.emit(this.car.id);
   }

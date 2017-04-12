@@ -1,0 +1,5 @@
+<user 
+  *ngFor="let _user of _users" 
+  [user]="_user"
+  (removeUser)="removeUser($event)">
+</user>

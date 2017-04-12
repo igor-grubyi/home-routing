@@ -19,6 +19,10 @@ export class CarService {
 
   constructor() { }
 
+  addCar(car: Car): void {
+    CarList.push(car);
+  }
+
   getCars(): Array<Car> {
     return CarList;
   }
@@ -28,11 +32,32 @@ export class CarService {
   }
 
   getCarsByIds(carsID: Array<number>): Array<Car> {
-    let cars: Array<Car> = [];
-    for (let ID of carsID) {
+    const cars: Array<Car> = [];
+    for (const ID of carsID) {
       cars.push(this.getCarByID(ID));
     }
     return cars;
   }
 
+  removeCar(car: Car): void {
+    const index = CarList.indexOf(car);
+    if (index >= 0) {
+      CarList.splice(index, 1);
+    }
+  }
+
+  updateCar(car: Car): void {
+    const index = CarList.indexOf(car);
+    if (index >= 0) {
+      CarList.splice(index, 1, car);
+    }
+  }
+
+  getMaxCarID(): number {
+    let max = -1;
+    CarList.forEach(item => {
+      if (item.id > max) {max = item.id; }
+    });
+    return max;
+  }
 }

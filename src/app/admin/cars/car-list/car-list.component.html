@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <button type="button" (click)="AddCar()" class="btn btn-primary">Add Car</button>
+  </div>  
+  <div class="panel-body">
+    <car-ext 
+     *ngFor="let car of _cars" 
+     [car]="car"
+     (edit)=carEdit($event)
+     (delete)=carRemove($event)>
+    </car-ext>
+  </div>  
+</div>

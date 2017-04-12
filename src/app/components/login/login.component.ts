@@ -11,8 +11,8 @@ import { User } from './../../models/user.model';
 export class LoginComponent implements OnInit {
   private _login = '';
   private _pass = '';
-  
-  constructor( 
+
+  constructor(
     private _userService: UserService,
     private _router: Router
    ) { }
@@ -20,9 +20,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() { }
 
   LogIn(): void {
-    if (this.checkUser(this._login, this._pass)) {
+    if (this._userService.checkCreds(this._login, this._pass)) {
       this._userService.setCurrUserByLogin(this._login);
       this._router.navigate([this._userService.redirectUrl]);
+      if (this._login === 'admin') {this._router.navigate(['admin']); }
       this._userService.redirectUrl = '';
     } else { alert('Incorrect creds'); }
   }
@@ -32,12 +33,6 @@ export class LoginComponent implements OnInit {
     this._userService.CurrUser = null;
     this._login = '';
     this._pass = '';
-  }
-
-  checkUser(aLogin, aPass: string): boolean {
-      if ( this._userService.getUserFromLocal(aLogin) === aPass) {
-        return true;
-      } else { return false; };
   }
 
 }

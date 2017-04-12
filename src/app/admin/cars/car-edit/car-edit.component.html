@@ -1,0 +1,58 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="pannel-title">
+            Edit car
+        </h4>
+    </div>
+    <div class="panel-body">
+        <form id="edit-car-form" (ngSubmit)="Save()">
+            <div class="form-group">
+                <label for="Brand">Brand</label>
+                <input type="text" 
+                    name="brand" 
+                    class="form-control" 
+                    placeholder="Brand" 
+                    required
+                    [(ngModel)]="_car.brand">              
+            </div>
+            <div class="form-group">
+                <label for="Model">Model</label>
+                <input type="text" 
+                    class="form-control" 
+                    id="model" name="model"
+                    placeholder="Model"
+                    required
+                    [(ngModel)]="_car.model">
+            </div>
+            <div class="form-group">
+              <label for="Year">Year</label>
+              <input type="number" 
+                  class="form-control" 
+                  id="year" name="year"
+                  placeholder="Year"
+                  required
+                  [(ngModel)]="_car.year">
+            </div>
+            <div class="form-group">
+              <label for="Color">Color</label>
+              <input type="number" 
+                  class="form-control" 
+                  id="color" name="color"
+                  placeholder="Color"
+                  required
+                  [(ngModel)]="_car.color">
+            </div>
+            <div class="form-group">
+                <label for="State">State</label>
+                <input type="text" 
+                    class="form-control" 
+                    id="state" name="state"
+                    placeholder="State"
+                    required
+                    [(ngModel)]="_car.state">
+            </div>
+            <button type="submit" class="btn btn-success" form="reg-user-form">Save</button>
+            <button type="button" (click)="Cancel()" class="btn btn-warning" form="reg-user-form">Cancel</button>
+        </form>
+    </div>
+</div>

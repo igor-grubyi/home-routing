@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+	<div class="panel-heading">User</div>
+	<div class="panel-body">
+		<ul>
+      		<li>ID: {{user.id}}</li>
+			<li>Login: {{user.lastName}}</li>
+			<li>FirtsName: {{user.firstName}}</li>
+			<li>LastName: {{user.lastName}}</li>
+		</ul>
+		<button *ngIf="user.login != 'admin'" class="btn btn-danger btn-sm"
+			(click)="deleteUser(user)">
+			Delete
+		</button>
+	</div>
+</div>

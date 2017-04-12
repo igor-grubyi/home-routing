@@ -1,3 +1,13 @@
-<p>
-  admin works!
-</p>
+<!--<h3>Admin</h3>-->
+<nav>
+  <ul class="nav nav-tabs">
+    <li routerLinkActive="active">
+      <a [routerLink]="['./users']">Manage Users</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['./cars']">Manage Cars</a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "admin",
+      "firstName": "admin",
+      "lastName": "admin",
+      "pass": "admin",
+      "carsID": []
+    },
+    {
+      "id": 2,
+      "login": "1",
+      "firstName": "1",
+      "lastName": "1",
+      "pass": "1",
+      "carsID": []
+    },
+    {
+      "id": 4,
+      "login": "3",
+      "firstName": "3",
+      "lastName": "3",
+      "pass": "3",
+      "carsID": []
+    },
+    {
+      "id": 5,
+      "login": "5",
+      "firstName": "5",
+      "lastName": "5",
+      "pass": "5",
+      "carsID": []
+    },
+    {
+      "id": 6,
+      "login": "gor",
+      "firstName": "igor",
+      "lastName": "gr",
+      "pass": "123",
+      "carsID": []
+    },
+    {
+      "id": 3,
+      "login": "gor",
+      "firstName": "igor",
+      "lastName": "gr",
+      "pass": "123",
+      "carsID": []
+    }
+  ]
+}

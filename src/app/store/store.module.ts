@@ -26,9 +26,6 @@ import { OrderComponent } from './order/order.component';
     StoreRoutingModule
   ],
   providers: [],
-  exports: [
-    // CarListComponent,
-    // BasketComponent
-  ]
+  exports: []
 })
 export class StoreModule { }

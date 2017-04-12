@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h4>{{car.brand}}: {{car.model}}</h4></div>
+	<div class="panel-body">
+    <img alt="img for car" 
+		#img
+		align='left'
+		hspace='50'>
+		<ul>
+			<li><h4>ID: {{car.id}}</h4></li>
+			<li><h4>Year: {{car.year}}</h4></li>
+			<li><h4>Color: {{car.color}}</h4></li>
+			<li><h4>State: {{car.state}}</h4></li>
+			<br>
+			<button type="button" (click)="Edit(car)" class="btn btn-warning">Edit</button>
+			<button type="button" (click)="Remove(car)" class="btn btn-danger">Remove</button>
+		</ul>
+	</div>
+</div>
