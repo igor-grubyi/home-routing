@@ -47,9 +47,12 @@ export class CarService {
   }
 
   updateCar(car: Car): void {
-    const index = CarList.indexOf(car);
-    if (index >= 0) {
-      CarList.splice(index, 1, car);
+    let indx = -1;
+    CarList.forEach((item, index) => {
+      if (item.id === car.id) {indx = index; }
+    });
+    if (indx >= 0) {
+      CarList.splice(indx, 1, car);
     }
   }
 

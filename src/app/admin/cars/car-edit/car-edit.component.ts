@@ -22,7 +22,7 @@ export class CarEditComponent implements OnInit {
   ngOnInit() {
     this._carId = +this._route.snapshot.params['id'];
 
-    this._car = this._carServ.getCarByID(this._carId);
+    this._car = Object.assign({}, this._carServ.getCarByID(this._carId));
   }
 
   Save() {
