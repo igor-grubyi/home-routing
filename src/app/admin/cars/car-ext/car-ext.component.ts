@@ -29,6 +29,8 @@ export class CarExtComponent implements AfterViewInit {
 
   Remove(car: Car) {
     this.delete.emit(car);
+
+    
   }
 
 }
